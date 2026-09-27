@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.VendorCategoryRequest;
 import com.manacommunity.api.vendor.dto.VendorCategoryResponse;
@@ -65,3 +65,4 @@ public class VmsVendorCategoryController {
         return ResponseEntity.noContent().build();
     }
 }
+

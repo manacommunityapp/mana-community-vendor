@@ -1,5 +1,6 @@
 package com.manacommunity.api.vendor.repository;
 
+import com.manacommunity.common.model.Community;
 import com.manacommunity.api.vendor.entity.VmsVendorService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,3 +22,4 @@ public interface VmsVendorServiceRepository extends JpaRepository<VmsVendorServi
            "AND (LOWER(s.name) LIKE LOWER(CONCAT('%', :query, '%')) OR LOWER(s.description) LIKE LOWER(CONCAT('%', :query, '%')))")
     Page<VmsVendorService> searchByCommunity(@Param("communityId") Long communityId, @Param("query") String query, Pageable pageable);
 }
+

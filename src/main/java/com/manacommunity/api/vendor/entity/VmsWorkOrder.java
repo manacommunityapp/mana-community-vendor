@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.model.Community;
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.model.Community;
+import com.manacommunity.common.user.model.AppUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -128,3 +128,4 @@ public class VmsWorkOrder {
     public enum WorkOrderStatus { CREATED, ASSIGNED, ACCEPTED, IN_PROGRESS, ON_HOLD, COMPLETED, CANCELLED, REJECTED }
     public enum Priority { LOW, MEDIUM, HIGH, URGENT, CRITICAL }
 }
+

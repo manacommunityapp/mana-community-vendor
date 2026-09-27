@@ -1,6 +1,6 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.model.Community;
+import com.manacommunity.common.model.Community;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -124,3 +124,4 @@ public class VmsVendorService {
 
     public enum ServiceStatus { ACTIVE, INACTIVE, DELETED }
 }
+

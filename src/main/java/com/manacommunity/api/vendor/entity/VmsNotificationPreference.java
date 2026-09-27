@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.model.Community;
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.model.Community;
+import com.manacommunity.common.user.model.AppUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -49,3 +49,4 @@ public class VmsNotificationPreference {
     @PreUpdate
     protected void onUpdate() { updatedAt = LocalDateTime.now(); }
 }
+

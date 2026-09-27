@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.model.Community;
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.model.Community;
+import com.manacommunity.common.user.model.AppUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -127,3 +127,4 @@ public class VmsContract {
     public enum ContractType { SERVICE, AMC, INSURANCE, LEASE, SUPPLY, SLA, MAINTENANCE }
     public enum ContractStatus { DRAFT, ACTIVE, EXPIRED, TERMINATED, RENEWED, PENDING_RENEWAL }
 }
+

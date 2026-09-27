@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.service;
 
-import com.manacommunity.api.exception.ResourceNotFoundException;
-import com.manacommunity.api.model.Community;
+import com.manacommunity.common.exception.ResourceNotFoundException;
+import com.manacommunity.common.model.Community;
 import com.manacommunity.api.vendor.dto.VendorCategoryRequest;
 import com.manacommunity.api.vendor.dto.VendorCategoryResponse;
 import com.manacommunity.api.vendor.entity.VmsVendorCategory;
@@ -92,3 +92,4 @@ public class VmsVendorCategoryService {
                 .build();
     }
 }
+

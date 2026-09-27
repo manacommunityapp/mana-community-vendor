@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.VendorRegistrationRequest;
 import com.manacommunity.api.vendor.dto.VendorRegistrationResponse;
@@ -74,3 +74,4 @@ public class VmsRegistrationController {
         return ResponseEntity.ok(registrationService.reject(id, user.getCommunity().getId(), reason, user));
     }
 }
+

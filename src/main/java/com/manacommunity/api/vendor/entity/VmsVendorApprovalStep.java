@@ -1,6 +1,6 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.user.model.AppUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -66,3 +66,4 @@ public class VmsVendorApprovalStep {
 
     public enum ApprovalStepStatus { PENDING, IN_PROGRESS, APPROVED, REJECTED }
 }
+

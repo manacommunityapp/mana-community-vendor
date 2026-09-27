@@ -1,5 +1,6 @@
 package com.manacommunity.api.response;
 
+import com.manacommunity.common.model.Community;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,3 +26,4 @@ public class CommunityResponse {
     private Boolean active;
     private List<String> enabledModules;
 }
+

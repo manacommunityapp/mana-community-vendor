@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.WorkOrderRequest;
 import com.manacommunity.api.vendor.dto.WorkOrderResponse;
@@ -87,3 +87,4 @@ public class VmsWorkOrderController {
         return ResponseEntity.ok(workOrderService.assignVendor(id, vendorId, user.getCommunity().getId()));
     }
 }
+

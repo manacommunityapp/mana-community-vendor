@@ -1,6 +1,6 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.user.model.AppUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -69,3 +69,4 @@ public class VmsVendorVerification {
 
     public enum VerificationStatus { PENDING, VERIFIED, FAILED, EXPIRED }
 }
+

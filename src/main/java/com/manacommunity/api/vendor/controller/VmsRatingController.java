@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.RatingRequest;
 import com.manacommunity.api.vendor.dto.RatingResponse;
@@ -45,3 +45,4 @@ public class VmsRatingController {
                 .body(ratingService.submitRating(req, user, user.getCommunity()));
     }
 }
+

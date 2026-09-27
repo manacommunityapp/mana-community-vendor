@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.PaymentRequest;
 import com.manacommunity.api.vendor.dto.PaymentResponse;
@@ -75,3 +75,4 @@ public class VmsPaymentController {
         return ResponseEntity.ok(paymentService.updateStatus(id, status, user.getCommunity().getId()));
     }
 }
+

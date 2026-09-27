@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.entity;
 
-import com.manacommunity.api.model.Community;
-import com.manacommunity.api.user.model.AppUser;
+import com.manacommunity.common.model.Community;
+import com.manacommunity.common.user.model.AppUser;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -100,3 +100,4 @@ public class VmsPayment {
     public enum PaymentType { ADVANCE, PARTIAL, FULL, REFUND, COMMISSION, SETTLEMENT }
     public enum PaymentProcessStatus { PENDING, PROCESSING, COMPLETED, FAILED, CANCELLED }
 }
+

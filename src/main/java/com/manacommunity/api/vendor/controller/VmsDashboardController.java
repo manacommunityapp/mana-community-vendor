@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.VendorDashboardResponse;
 import com.manacommunity.api.vendor.dto.VendorPerformanceResponse;
@@ -40,3 +40,4 @@ public class VmsDashboardController {
         return ResponseEntity.ok(dashboardService.getPerformanceLeaderboard(user.getCommunity().getId(), PageRequest.of(page, size)));
     }
 }
+

@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.ContractRequest;
 import com.manacommunity.api.vendor.dto.ContractResponse;
@@ -76,3 +76,4 @@ public class VmsContractController {
         return ResponseEntity.ok(contractService.updateStatus(id, status, user.getCommunity().getId()));
     }
 }
+

@@ -1,7 +1,7 @@
 package com.manacommunity.api.vendor.controller;
 
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.security.UserPrincipal;
 import com.manacommunity.api.user.service.LoggedInUserService;
 import com.manacommunity.api.vendor.dto.BookingRequest;
 import com.manacommunity.api.vendor.dto.BookingResponse;
@@ -90,3 +90,4 @@ public class VmsBookingController {
         return ResponseEntity.ok(bookingService.updateStatus(id, status, user.getCommunity().getId(), reason));
     }
 }
+

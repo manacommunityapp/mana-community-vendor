@@ -1,5 +1,6 @@
 package com.manacommunity.api.vendor.repository;
 
+import com.manacommunity.common.model.Community;
 import com.manacommunity.api.vendor.entity.VmsVendor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,3 +31,4 @@ public interface VmsVendorRepository extends JpaRepository<VmsVendor, Long> {
 
     long countByCommunityIdAndStatus(Long communityId, VmsVendor.VendorStatus status);
 }
+

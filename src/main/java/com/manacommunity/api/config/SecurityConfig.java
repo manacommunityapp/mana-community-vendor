@@ -1,9 +1,10 @@
 package com.manacommunity.api.config;
 
+import com.manacommunity.common.model.Community;
 import static com.manacommunity.api.constants.PermissionConstants.*;
-import com.manacommunity.api.user.model.AppUser;
-import com.manacommunity.api.user.repository.AppUserRepository;
-import com.manacommunity.api.user.security.UserPrincipal;
+import com.manacommunity.common.user.model.AppUser;
+import com.manacommunity.common.user.repository.AppUserRepository;
+import com.manacommunity.common.user.security.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -26,7 +27,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint;
-import com.manacommunity.api.security.JwtAuthenticationFilter;
+import com.manacommunity.common.security.JwtAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -65,10 +66,10 @@ public class SecurityConfig { // BUG FIX: was package-private
     private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
-    private com.manacommunity.api.security.RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+    private com.manacommunity.common.security.RestAuthenticationEntryPoint restAuthenticationEntryPoint;
 
     @Autowired
-    private com.manacommunity.api.security.RestAccessDeniedHandler restAccessDeniedHandler;
+    private com.manacommunity.common.security.RestAccessDeniedHandler restAccessDeniedHandler;
 
     @Value("${app.cors.allowed-origins:*}")
     private List<String> allowedOrigins;
@@ -250,3 +251,5 @@ public class SecurityConfig { // BUG FIX: was package-private
 
 
 }
+
+
