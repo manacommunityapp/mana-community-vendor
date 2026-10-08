@@ -53,9 +53,9 @@ public class VmsVendorBranch {
     @Builder.Default
     private Boolean isHeadOffice = false;
 
-    @Column(nullable = false)
+    @Column(name = "is_active", nullable = false)
     @Builder.Default
-    private Boolean active = true;
+    private Boolean isActive = true;
 
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -68,8 +68,6 @@ public class VmsVendorBranch {
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
     }
-
-    public Boolean getIsActive() { return active; }
 
     @PreUpdate
     protected void onUpdate() {

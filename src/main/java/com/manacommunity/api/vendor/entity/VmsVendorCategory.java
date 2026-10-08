@@ -38,9 +38,9 @@ public class VmsVendorCategory {
     @Builder.Default
     private Integer sortOrder = 0;
 
-    @Column(nullable = false)
+    @Column(name = "is_active", nullable = false)
     @Builder.Default
-    private Boolean active = true;
+    private Boolean isActive = true;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "community_id", nullable = false)
@@ -58,12 +58,8 @@ public class VmsVendorCategory {
         updatedAt = LocalDateTime.now();
     }
 
-    public Boolean getIsActive() { return active; }
-    public void setIsActive(Boolean active) { this.active = active; }
-
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
 }
-

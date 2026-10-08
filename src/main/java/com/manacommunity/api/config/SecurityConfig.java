@@ -75,8 +75,13 @@ public class SecurityConfig { // BUG FIX: was package-private
     private List<String> allowedOrigins;
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public static PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public static com.manacommunity.common.util.SecurityErrorWriter securityErrorWriter() {
+        return new com.manacommunity.common.util.SecurityErrorWriter();
     }
 
     /**
