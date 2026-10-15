@@ -89,5 +89,54 @@ public class VmsVendorController {
         vendorService.updateVendorStatus(id, status, user.getCommunity().getId());
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("/me")
+    @PreAuthorize("hasAuthority('View Vendor Management')")
+    public ResponseEntity<VendorResponse> getMe(
+            @AuthenticationPrincipal UserPrincipal principal) {
+        return getMyProfile(principal);
+    }
+
+    @PutMapping("/{id}/approve")
+    @PreAuthorize("hasAuthority('Manage Vendors')")
+    public ResponseEntity<VendorResponse> approve(
+            @PathVariable Long id,
+            @AuthenticationPrincipal UserPrincipal principal) {
+        AppUser user = loggedInUserService.resolve(principal);
+        vendorService.updateVendorStatus(id, "APPROVED", user.getCommunity().getId());
+        return ResponseEntity.ok(vendorService.getVendorById(id, user.getCommunity().getId()));
+    }
+
+    @PutMapping("/{id}/reject")
+    @PreAuthorize("hasAuthority('Manage Vendors')")
+    public ResponseEntity<VendorResponse> reject(
+            @PathVariable Long id,
+            @RequestBody(required = false) java.util.Map<String, String> body,
+            @AuthenticationPrincipal UserPrincipal principal) {
+        AppUser user = loggedInUserService.resolve(principal);
+        vendorService.updateVendorStatus(id, "REJECTED", user.getCommunity().getId());
+        return ResponseEntity.ok(vendorService.getVendorById(id, user.getCommunity().getId()));
+    }
+
+    @PutMapping("/{id}/suspend")
+    @PreAuthorize("hasAuthority('Manage Vendors')")
+    public ResponseEntity<VendorResponse> suspend(
+            @PathVariable Long id,
+            @RequestBody(required = false) java.util.Map<String, String> body,
+            @AuthenticationPrincipal UserPrincipal principal) {
+        AppUser user = loggedInUserService.resolve(principal);
+        vendorService.updateVendorStatus(id, "SUSPENDED", user.getCommunity().getId());
+        return ResponseEntity.ok(vendorService.getVendorById(id, user.getCommunity().getId()));
+    }
+
+    @PutMapping("/{id}/reactivate")
+    @PreAuthorize("hasAuthority('Manage Vendors')")
+    public ResponseEntity<VendorResponse> reactivate(
+            @PathVariable Long id,
+            @AuthenticationPrincipal UserPrincipal principal) {
+        AppUser user = loggedInUserService.resolve(principal);
+        vendorService.updateVendorStatus(id, "APPROVED", user.getCommunity().getId());
+        return ResponseEntity.ok(vendorService.getVendorById(id, user.getCommunity().getId()));
+    }
 }
 

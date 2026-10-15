@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public interface VmsQuotationRepository extends JpaRepository<VmsQuotation, Long> {
     Page<VmsQuotation> findByCommunityId(Long communityId, Pageable pageable);
+    Page<VmsQuotation> findByCommunityIdAndPurchaseRequestId(Long communityId, Long purchaseRequestId, Pageable pageable);
     List<VmsQuotation> findByPurchaseRequestId(Long purchaseRequestId);
     Page<VmsQuotation> findByVendorId(Long vendorId, Pageable pageable);
     Optional<VmsQuotation> findByIdAndCommunityId(Long id, Long communityId);
